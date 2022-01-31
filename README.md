@@ -1,1 +1,5 @@
-# genesys-framework-routing-and-reporting-administration
+# Genesys Framework Routing and Reporting Administration
+
+## Descoberta e planejamento da Equipe
+
+
