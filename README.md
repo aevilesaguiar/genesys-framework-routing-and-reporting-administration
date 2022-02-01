@@ -2,4 +2,7 @@
 
 ## Descoberta e planejamento da Equipe
 
+- Time
+- Dimensionamento de dependencias
+
 
