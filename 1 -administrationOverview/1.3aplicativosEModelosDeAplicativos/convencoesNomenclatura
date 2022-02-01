@@ -1,0 +1,20 @@
+
+## Naming conventions (Convenções de nomenclatura)
+
+Ao planejar sua implantação, é importante planejar os nomes e convenções para todos os tipos de objetos antes da implantação. Pode ser difícil fazer alterações após a implantação. É muito importante documentar as convenções de nomenclatura decididas antes de sua implantação.
+Aqui estão as regras gerais a serem seguidas:
+* Sem espaços nos nomes dos aplicativos
+- Sem caracteres especiais em nenhum nome
+ - Pode usar o caractere de sublinhado '_' e não o caractere de traço '-'
+   - Um caractere de ponto '.' está OK apenas em nomes de host
+
+   ![image](https://user-images.githubusercontent.com/52088444/152012173-92ad0cc8-8fe8-4ea0-be69-79597988b9ca.png)
+   ![image](https://user-images.githubusercontent.com/52088444/152012314-31a7e55e-c60a-4342-980d-2185ad916e48.png)
+   ![image](https://user-images.githubusercontent.com/52088444/152012427-a1cd31e5-3d02-45ee-b442-3b0c8d496136.png)
+   ![image](https://user-images.githubusercontent.com/52088444/152012536-0c7b3d8e-e2ce-4ae5-afc9-f9e9677e06f6.png)
+   ![image](https://user-images.githubusercontent.com/52088444/152012587-8aba64ea-ea94-4add-97ca-eca187331ffe.png)
+   ![image](https://user-images.githubusercontent.com/52088444/152012679-2bb30814-9954-4a46-a91c-6cccc396f3d8.png)
+
+
+
+

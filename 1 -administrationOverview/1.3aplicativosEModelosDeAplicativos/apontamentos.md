@@ -64,5 +64,6 @@ Dependências exibe uma lista de todos os objetos que são dependentes desse obj
 A seção Portas exibe o número da porta atualmente em uso por todos os aplicativos que se comunicam com este objeto de aplicativo. No Genesys, 
 é assim que os aplicativos se comunicam uns com os outros - usando portas numeradas semelhantes a como você usa um número de telefone para se comunicar com um amigo.
 
-
-pagina 20
+**Opções do aplicativo**
+Você define as opções do aplicativo para personalizar o comportamento do aplicativo. As opções do aplicativo para cada tipo de aplicativo variam muito. As opções para um aplicativo T-Server, por exemplo . incluem parâmetros de comutação. As opções para um aplicativo State Server incluem definições de tipo estático. Algumas opções requerem valores válidos para operar, mas outras não.
+As principais opções serão apresentadas nesta classe, mas há muito mais opções disponíveis no Genesys. Verifique a documentação da Genesys para obter os detalhes das opções individuais.
