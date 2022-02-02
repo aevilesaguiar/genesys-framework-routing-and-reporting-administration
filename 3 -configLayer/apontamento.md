@@ -1,0 +1,73 @@
+# Configuration Layer (cAMADA DE CONFIGURAÇÃO) pagina 58
+
+
+## Obrigatório: Servidor de configuração e banco de dados
+
+A Camada de Configuração requer dois componentes: Servidor de Configuração(Configuration Server) e Banco de Dados de Configuração(Configuration Database)
+
+
+**Funções do servidor de configuração(configuration Server):**
+
+- Armazenamento de dados de configuração centralizado
+- Controle de integridade de dados
+- Controle de acesso
+- Notificação em tempo de execução(run-time)
+
+![image](https://user-images.githubusercontent.com/52088444/152161287-4fbe9960-2b11-476d-8eeb-fd45697e7a1a.png)
+
+**Funções do banco de dados de configuração(Configuration Database ):**
+
+- Armazena(store) todos os dados de configuração;
+
+Os clientes do servidor de configuração, como um T-SERVER, não serão iniciados a menos que se conectem com sucesso ao servidor de configuração (Configuration Server). Isso ocorre principalmente porque a maioria dos aplicativos não pode executar nenhuma função essencial sem acesso aos dados de configuração(configuration data).
+
+Os clientes não precisam permanecer conectados ao Configuration Server para permanecerem operacionais (eles continuarão trabalhando com os dados de configuração que já leram em sua própria memória).Em uma conexão, eles receberão dados de configuração novos e/ou alterados que o Configuration Server mantém em um log de histórico para essa finalidade.
+
+Os bancos de dados de configuração são o repositório central para todos os dados de configuração. O nome do banco de dados de configuração deve ser válido para o DBMS e deve corresponder ao valor dbname especificado no arquivo de configuração do Configuration Server. O banco de dados de configuração genesys pode ser suportado em qualquer um dos seguintes DBMS
+
+![image](https://user-images.githubusercontent.com/52088444/152163337-fcf81974-dbfd-4551-8844-8585bfc29e9b.png)
+
+## opcional : Backup e proxies do servidor de configuração
+
+Pode haver componentes opcionais com backup de servidor de configuração da camada de configuração e proxies de servidor de configuração.
+
+Ambas as opções serão examinadas com mais detalhes posteriormente neste curso.
+
+O servidor de configuração pode ser configurado como um Master Primary e um Server Master Backup de configuração. Isso é semelhante ao que você viu em uma configuração de alta disponibilidade em cursos anteriores. No caso de uma falha com o Master Primary, o backup Master assumirá o controle.
+
+Outra opção é ter um proxy do Servidor de Configuração. Eles são usados ​​em vários locais/locais remotos, para aplicativos se conectarem ao Configuration Server para autenticar seu login.
+
+![image](https://user-images.githubusercontent.com/52088444/152164715-fbf35509-18b5-49e3-a256-f6f73cb84fc4.png)
+
+## OPCIONAL: AUTENTICAÇÃO EXTERNA
+
+O software Genesys permite a integração com um sistema de autenticação de terceiros para controlar o acesso do usuário aos aplicativos Genesys. Dessa forma, você pode se beneficiar de seu sistema de segurança estabelecido, evitando a criação de um esquema de segurança adicional em seu ambiente(environment) Genesys.
+
+![image](https://user-images.githubusercontent.com/52088444/152165672-9975058e-1f2b-45b0-8618-e8428eff48d9.png)
+
+
+Para verificar a identidade de um usuário que efetua login em um aplicativo genesys, o Configuration Server pode:
+- verifique a permissão do usuário no banco de dados de configuração (check the user's permission in the Configuration Database)
+
+- passar as informações de login do usuário para um servidor de terceiros(pass the user's login information to a third-party server)
+
+- receber resultados de autenticação positivos do sistema externo(receive positive authentication results from the external system)
+
+- Realizar verificação de permissão no banco de dados de configuração(Perform permission verification in the Configuration Database)
+
+Quando um sistema externo lida com o processo de autenticação, o Configuration Server se comunica com o servidor de autenticação externo por meio de um módulo conectável que a Genesys desenvolveu para o servidor de terceiros específico.
+
+Atualmente, o Framework suporta o seguinte:
+
+![image](https://user-images.githubusercontent.com/52088444/152167306-e35db608-7130-44e8-953a-24faa87e88d3.png)
+
+![image](https://user-images.githubusercontent.com/52088444/152167465-fd1747b7-437b-44a0-86bd-f79e651d53e8.png)
+
+![image](https://user-images.githubusercontent.com/52088444/152167560-baa3b5e5-dc55-47a6-b0c7-66dc6d4e55d8.png)
+
+## DEPLOYING CONFIGURATION LAYER (IMPLANTANDO CONFIGURATION LAYER)
+
+
+A instalação da Camada de Configuração é obrigatória. Outros componentes Genesys não podem ser operados sem a camada de configuração instalada e em execução(Installing Configuration Layer is mandatory. Other Genesys components cannot be operated without the Configuration Layer in place and running)
+
+pagina 62
