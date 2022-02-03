@@ -59,8 +59,8 @@
 - Metadados✅
 
 5 . Hosts and local Control Agents
-- Hosts(96)
-- Objeto Host (97)
+- Hosts(96)✅
+- Objeto Host (97)✅
 - Segurança da Camada de Transporte (TLS) - Opcional(98)
 - Portas Local Controle Agent (LCA) e Genesys Deployment Agent (GDA)(99)
 - LCA e GDA
