@@ -98,5 +98,84 @@ A conta de usuário padrão não está relacionada a funções e, portanto, não
 
 A conta de usuário padrão não está relacionada a Grupos de Acesso e, portanto, não aparece como membro de nenhum Grupo de Acesso.
 
-Esta conta mestra será usada para o primeiro login no Genesys Administartor.
+Esta conta mestra será usada para o primeiro login no Genesys Administrator.
 
+## Solução de problemas do administrador Genesys
+
+Se a instalação do Genesys Administrator não estiver funcionando corretamente, existem vários erros possíveis de login do Genesys Administrator que podem estar causando o problema. Verifique a lista abaixo para ver se algum dos erros que você está enfrentando corresponde aos problemas conhecidos do GA. Essas dicas de solução de problemas e soluções conhecidas podem ajudar:
+
+Possíveis erros de login do GA:
+
+
+- Permission error when login
+- window error after entering the url
+-Statistical Information Missing on Dashboard
+- 500 Error
+- 400 Error
+
+- Erro de permissão ao fazer login
+- erro de janela após inserir a url
+-Informações estatísticas ausentes no painel
+- 500 Erro
+- Erro 400
+
+![image](https://user-images.githubusercontent.com/52088444/152393592-14c245d7-8f9e-47ed-9583-4869395e3dd5.png)
+![image](https://user-images.githubusercontent.com/52088444/152393664-8602932d-9365-4995-b7d6-015b9ba870a0.png)
+![image](https://user-images.githubusercontent.com/52088444/152393732-17876c5e-e815-4e63-b98f-643d84f52adb.png)
+![image](https://user-images.githubusercontent.com/52088444/152393791-f59e89d4-e9a4-42f1-92de-ce86b2628512.png)
+
+
+## funcionalidade apenas no Genesys Administrator
+
+Genesys Administrator (GA) e Genesys Administration Extension (GAX) são interfaces de usuário associadas aos acessos da camada de interação do usuário usando navegadores da web. (Genesys Administrator e GAX têm URLs diferentes).
+Embora as interfaces possam parecer diferentes, grande parte da funcionalidade no Genesys Administrator e no Genesys Administrator Extension é a mesma. Dito isto, existem algumas diferenças das quais você deve estar ciente:
+
+O Genesys Administrator possui alguns recursos que não são compartilhados no Genesys Administrator Extension - três dos quais são:
+- Modos somente leitura e emergência( Read-Only and Emergency Modes)
+-Metadados(Metadata)
+
+
+## MODOS SOMENTE LEITURA E EMERGÊNCIA
+Se você estiver conectado ao Genesys Administrator por meio da conta mestra ou como Super Administrator, os itens de menu Read-only Mode e Emergency Mode são habilitados no menu suspenso(Preferences Drop Down) Preferences no Genesys Administrator. 
+
+Selecting these items switches the entire Configuration Layer to the selected read only-state:
+
+- Realy -only mode
+        -Todos restritos ao estado somente leitura
+- Emergency Mode
+        - Super administradores podem fazer alterações
+        - todos os outros restritos ao estado somente leitura(- all others restricted to read-only state)
+![image](https://user-images.githubusercontent.com/52088444/152397223-b34e42ca-412d-4d97-a68f-dee0980c05d1.png)
+
+Quando o modo somente leitura está ativado, nenhum usuário, incluindo o usuário da conta principal, pode fazer alterações no banco de dados de configuração. Todos os usuários que trabalham na camada de configuração são notificados de que o modo somente leitura está ativado e o status Read-onlu é exibido na barra de status do Configuration Manager.
+
+Quando a camada de configuração está no modo somente leitura, os aplicativos cliente que tentam fazer alterações na configuração recebem uma mensagem de erro. (Esses aplicativos cliente são clientes do Servidor de Configuração, como Workspace, assistentes e assim por diante).
+
+No Modo de Emergência, a restrição somente leitura se aplica a todos os usuários, exceto aqueles que são membros do grupo de usuários Super Administrador predefinido. Ou seja, apenas os usuários que são membros do grupo Super Administrador podem fazer alterações no Banco de Dados de Configuração.
+
+## METADADOS
+
+Os metadados definem parâmetros (opções de configuração), incluindo valores padrão e válidos que são aplicáveis ​​ao aplicativo e quaisquer objetos de banco de dados de configuração relacionados que serão implantados e gerenciados usando o Genesys Administrator.
+
+Os metadados de um aplicativo estão localizados no mesmo CD do produto e na mesma pasta que o Modelo de Aplicativo do aplicativo correspondente. O arquivo de metadados tem o mesmo nome que o nome do arquivo do Modelo de Aplicativo, mas com uma extensão .xml. O arquivo .xml é importado para o Genesys usando a tela de modelo de aplicativo do administrador do Genesys
+
+Exemplo:
+![image](https://user-images.githubusercontent.com/52088444/152400261-a7ac1694-a9dc-4d04-a2c4-b894456ba0cd.png)
+
+![image](https://user-images.githubusercontent.com/52088444/152400363-83432630-d7e8-4f9a-b7b9-950130c60a67.png)
+![image](https://user-images.githubusercontent.com/52088444/152400437-7fbd87ab-25e4-46c1-b03f-a494d7dc118a.png)
+
+**Opções de Apllicação:**
+
+Quando os metadados estão disponíveis para um componente , os metadados são exibidos ao usuário final em um formato amigável que inclui:
+
+- Uma lista completa de opções de configuração para aquele componente que o usuário pode usar para configurar o objeto de aplicação.
+
+- Um editor personalizado para cada opção nessa lista, descrevendo a opção e valor.
+
+- Validação de entrada, garantindo que o valor inserido e seu tipo sejam válidos para a opção específica.
+
+![image](https://user-images.githubusercontent.com/52088444/152401389-3dd09234-67f4-4325-9fb3-361985dfb776.png)
+
+
+Nota: existem algumas opções que não estão incluídas na metada. Eles podem ser adicionados manualmente.
