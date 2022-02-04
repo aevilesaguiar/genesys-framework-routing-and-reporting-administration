@@ -61,24 +61,60 @@
 5 . Hosts and local Control Agents
 - Hosts(96)✅
 - Objeto Host (97)✅
-- Segurança da Camada de Transporte (TLS) - Opcional(98)
-- Portas Local Controle Agent (LCA) e Genesys Deployment Agent (GDA)(99)
-- LCA e GDA
-- arquivos de configuração: logging(100)
+- Segurança da Camada de Transporte (TLS) - Opcional(98)✅
+- Portas Local Controle Agent (LCA) e Genesys Deployment Agent (GDA)(99)✅
+- LCA e GDA✅
+- arquivos de configuração: logging(100)✅
 
-6 . Genesys administration Extension
+6 . Genesys administration Extension(103)
+
+- Revisão: Arquitetura Genesys Admistrator Extendion (GAX) (103)
+- Pré-requisitos de terceiros para GAX(105)
+- Arquitetura de Auditoria (106)
+- Configurando gax(107)
+- Implantação da solução usando GAX(109)
+- Como funcionam as implantações de soluções(111)
+- Plug-ins Gax(113)
+- instalando GAX PLUG-INS(114)
+- Criar superadministrador(115)
+
+
 7. License Servers
+
+
 9. Managment Layer
+
+
 10 . Workspace desktop Edition
+
+
 11. Services layer
+
+
 12 . Routing servers
+
+
 13 . Composer
+
+
 14 . IRD-Based Routing
+
+
 15 . License Reporting
+
+
 16 . Pulse
+
+
 17 . CCAnalizer
+
+
 18 . CCPulse +
+
+
 19. Multi-host and Multi-site
+
+
 20. Service Availability
 
 
