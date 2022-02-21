@@ -39,4 +39,12 @@ Cada objeto de switch é emparelhado com , e é controlado por um T-Server e rep
 
 -DN - DNs (números de diretório) representam dispositivos de comunicação onde as interações dos clientes (por exemplo, chamadas telefônicas) são tratadas. Tipos de DN comuns incluem Pontos de Roteamento (RP), Filas (Q) e Extensões (Ext). Na maioria dos casos, os DN'S no banco de dados de configurações devem corresponder exatamente à configuração do DNS no sistema de swithing.
 
-- Login de agente - Logins de agente são códigos exclusivos definidos em uma central e atribuídos a agentes. Os logins do agente no banco de dados de configuração devem corresponder aos logins do agente no switch. Os logins de agente são usados para relacionar um usuário específico a uma sessão de trabalho específica. No Genesys , cada Login de Agente está associado a um agente ou pessoa específica . Apenas uma pessoa pode possuir o login a qualquer momento. No entanto, uma única pessoa pode possuir vários Logins de Agente. Por exemplo: se um agente logar em DNs em mais de um switch, esse agente precisará de um Agent Login em cada switch
+- Login de agente - Logins de agente são códigos exclusivos definidos em uma central e atribuídos a agentes. Os logins do agente no banco de dados de configuração devem corresponder aos logins do agente no switch. Os logins de agente são usados para relacionar um usuário específico a uma sessão de trabalho específica. No Genesys , cada Login de Agente está associado a um agente ou pessoa específica . Apenas uma pessoa pode possuir o login a qualquer momento. No entanto, uma única pessoa pode possuir vários Logins de Agente. Por exemplo: se um agente logar em DNs em mais de um switch, esse agente precisará de um Agent Login em cada switch.
+
+dentro do objeto Switch você pode criar:
+- Agent Logins
+- DN'S
+
+Independentemente do tipo de T-SERVER/SIP Server, existem várias opções de aplicativos que precisam ser configuradas que são comuns. A seção T-Server contém as opções de configuração que são usadas para suportar os recursos principais comuns a todos os T- servidores.
+
+
