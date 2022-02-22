@@ -1,0 +1,19 @@
+# Services Layer
+
+![image](https://user-images.githubusercontent.com/52088444/155151247-efc2a26c-1538-46de-9ffb-7382beb88d1a.png)
+
+Services layer se conecta com Configuration Layer para obter informações de Media Layer para se registrar para receber informações do T-server sobre a atividade em vários números de diretório (DNS), 
+para que o Stat Server possa fornecer estatísticas.
+
+## Stat Server
+O Stat Server rastreia informações de eventos de telefonia e status de objetos (agentes, grupos de agentes e DNS) e converte esses dados em informações estáticas usadas 
+por outros componentes da Genesys . Clientes de Stat Servers assinam estatísticas e, em seguida, pesquisam repetidamente fazendo solicitações de informações atuais. 
+
+## Stat Ser: Client and Server
+![image](https://user-images.githubusercontent.com/52088444/155153359-bb74cfa2-75cb-45f3-b726-5063d9c981a3.png)
+
+![image](https://user-images.githubusercontent.com/52088444/155153435-57913e62-94bd-4494-9bf7-a2e781b8da8b.png)
+
+![image](https://user-images.githubusercontent.com/52088444/155153560-ea2297a1-0eb4-4d86-b717-77645050b147.png)
+
+![image](https://user-images.githubusercontent.com/52088444/155153700-964443aa-6a01-4c33-9d71-49f4ff971a66.png)
